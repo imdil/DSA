@@ -9,8 +9,7 @@ int interpolationSearch(int arr[], int n, int x)
 	// Find indexes of two corners
 	int lo = 0, hi = (n - 1);
 
-	// Since array is sorted, an element present
-	// in array must be in range defined by corner
+	// Since array is sorted, an element present in array must be in range defined by corner
 	while (lo <= hi && x >= arr[lo] && x <= arr[hi])
 	{
 		if (lo == hi)
@@ -18,8 +17,7 @@ int interpolationSearch(int arr[], int n, int x)
 			if (arr[lo] == x) return lo;
 			return -1;
 		}
-		// Probing the position with keeping
-		// uniform distribution in mind.
+		// Probing the position with keeping uniform distribution in mind.
 		int pos = lo + (((double)(hi - lo) /
 			(arr[hi] - arr[lo])) * (x - arr[lo]));
 
